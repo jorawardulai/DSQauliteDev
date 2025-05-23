@@ -21,7 +21,7 @@ public class Calculatrice {
 
     public float minus(
             float operande1, float operande2){
-        return 0.0f;
+        return operande1 - operande2;
     }
 
 }
