@@ -8,7 +8,7 @@ import java.util.*;
 
 public class CalculatriceTest {
 
-    public Calculatrice calculatrice;
+    private Calculatrice calculatrice;
     @BeforeEach
     public void setUp(){
         calculatrice = new Calculatrice();
@@ -37,7 +37,13 @@ public class CalculatriceTest {
         System.out.println("test division ok");
 
     }
-
+    @Test
+    public void testDivByZero() {
+        assertThrows(ArithmeticException.class, () -> {
+            calculatrice.div(5.0f, 0.0f);
+        });
+        System.out.println("Test sur la division par 0 ok");
+    }
     @Test
     public void testMinus(){
         float result = calculatrice.minus(4.0f, 2.0f);
