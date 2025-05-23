@@ -1,0 +1,14 @@
+Couverture de code :
+
+1) Ici nous voyons que la méthode multiplicatino n'est pas du tout couvert par les test.
+   La division et l'addition le sont à 100%. Et donc les test en globalité recouvrent 83% des méthodes.
+
+   Nous devons donc faire un test de multiplication comme on a fait dans le premier exo :
+
+   @Test
+       public void testMult() {
+           float result = calculatrice.mult(2.0f, 2.0f);
+           assertEquals(4.0f, result);
+           System.out.println("test multiplication ok");
+
+   }
