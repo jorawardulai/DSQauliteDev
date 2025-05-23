@@ -38,5 +38,12 @@ public class CalculatriceTest {
 
     }
 
+    @Test
+    public void testMinus(){
+        float result = calculatrice.minus(2.0f, 2.0f);
+        assertEquals(0.0f, result);
+        System.out.println("test minus ok");
+    }
+
 }
 
